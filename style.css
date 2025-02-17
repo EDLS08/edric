@@ -1,0 +1,195 @@
+@font-face {
+    font-family:Product Sans ;
+    src: url(Product/Sans/Regular.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Product Sans;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+    /* overflow-x:hidden; */
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+#love-menu{
+    width: 100%;
+    height: 100vh;
+    background: rgb(215, 30, 215);
+   
+}
+.nav-container{
+    position:fixed;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height:10vh;
+    background: purple;
+    z-index: 99;
+
+}
+.menu-nav a{
+    display:flex;
+    gap: 50px;
+    font-size:larger;
+    width:100%;
+}
+ #logo1{
+    width: 100px;
+    height:100px;
+ }
+
+.nav-container a{ 
+    text-decoration:none;
+    color:white;
+    font-size: 50px;
+}
+.banner img{
+    width: 50PX;
+    
+
+}
+#gabs{
+    position:absolute;
+            width:30%;
+            z-index:2;
+            transform: rotate(270deg);
+            top:20%;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100vh;
+    background:linear-gradient(rgb(200, 28, 252), rgb(38, 3, 58))
+}
+.background-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* margin-top: 15%;
+    margin-left: 20%; */
+}
+.background-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.background-slider img.active {
+    opacity: 0.3;
+}
+
+.banner h1 {
+    font-size: 15vw;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.521);
+}
+#kitty, #kitty2 {
+    position: absolute;
+    width: 20%;
+    z-index: 3;
+    margin-top: 25%;
+}
+#kitty {
+    right: 80%;
+}
+#kitty2 {
+    left: 80%;
+}
+/* #gabs{
+    position:absolute;
+            width:30%;
+            z-index:2;
+            transform: rotate(270deg);
+            top:20%;
+} */
+
+
+.two{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    background: rgb(38, 3, 58);
+}
+
+
+.left-side, .right-side{
+    display:flex;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    gap: 5vh;
+}
+
+
+.left-side{
+    width: 50%;
+    height: 100%;
+    
+}
+.right-side{
+    padding-left: 5%;
+    
+}
+
+.right-side h2{
+     
+    color:#fff;
+    font-size: 5vw;
+}
+.right-side p{
+    color:#fff;
+    font-size: 1vw;
+    width: 80%;
+}
+
+/* Estiliza o fundo da página */
+
+
+/* Container do carrossel */
+.carousel {
+    width: 500px; /* Largura do carrossel */
+    height: 600px; /* Altura do carrossel */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    border-radius: 15px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde as partes que saem do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Mantém o carrossel em posição fixa */
+    margin-left: 30%;
+}
+
+/* As imagens dentro do carrossel */
+.carousel img {
+    width: 80%; /* Mantém a imagem centralizada e menor */
+    height: auto;
+    position: absolute; /* Sobrepõe as imagens */
+    opacity: 0; /* Todas as imagens ficam invisíveis por padrão */
+    transition: opacity 0.5s ease; /* Animação suave na troca */
+}
+
+/* Define a imagem visível */
+.carousel img.active {
+    opacity: 1; /* Apenas a imagem ativa é visível */
+}
