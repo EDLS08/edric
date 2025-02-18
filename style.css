@@ -193,3 +193,30 @@ body::-webkit-scrollbar{
 .carousel img.active {
     opacity: 1; /* Apenas a imagem ativa é visível */
 }
+
+
+css
+Copiar
+Editar
+@media (max-width: 768px) { 
+    .two {
+        flex-direction: column; /* Empilha os elementos no celular */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .left-side, .right-side {
+        width: 90%; /* Faz com que ambos ocupem quase toda a tela */
+        align-items: center; /* Centraliza os elementos */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+
+    .carousel {
+        margin-left: 0; /* Remove o deslocamento da esquerda */
+        width: 100%; /* Faz o carrossel ocupar toda a largura da tela */
+        height: auto; /* Mantém a proporção */
+    }
+
+    .right-side {
+        padding: 20px; /* Dá um espaçamento para o texto */
+    }
+}
